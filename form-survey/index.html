@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Form Survey</title>
+</head>
+<body>
+
+    <main>
+        <h1 id="title">Formulário de satisfação</h1>
+        <p id="description">Nos dê sua opinição pessoal sobre a sua viagem!</p>
+    
+        <form id="survey-form" action="#" method="post">
+    
+            <fieldset>
+                <label for="name" id="name-label" class="label">
+                    Nome: 
+                    <input 
+                    id="name" 
+                    name="name"
+                    type="text"
+                    placeholder="Digite seu nome completo."
+                    required/>
+                </label>
+                <label for="number" id="number-label" class="label">
+                    Idade: 
+                    <input 
+                    id="number" 
+                    name="age"
+                    type="number"
+                    min="18"
+                    max="100"
+                    placeholder="Informe sua idade."
+                    required/>
+                </label>
+                <label for="email" id="email-label" class="label">
+                    E-mail: 
+                    <input 
+                    id="email" 
+                    name="email"
+                    type="email"
+                    placeholder="Digite seu e-mail." 
+                    required/>
+                </label>
+                <label for="phone" id="phone-label" class="label">
+                    Telefone: 
+                    <input 
+                    id="phone" 
+                    name="phone"
+                    type="tel"
+                    placeholder="Informe sua telefone." 
+                    required/>
+                </label>
+                
+                <label for="dropdown" class="label">
+                    Qual o meio de viagem você escolheu?  
+                    <select 
+                    id="dropdown" 
+                    name="type"
+                    required />
+                        <option value="" disabled selected>Selecione uma opção.</option>
+                        <option value="1">Ônibus</option>
+                        <option value="2">Avião</option>
+                        <option value="3">Transporte Pessoal</option>
+                    </select>
+                </label>
+    
+                <div>
+                    <p class="label">O que motivou você a fazer a viagem? </p>
+                    <div class="container-motive">
+                        <label for="work" class="motive">
+                            <input 
+                            type="radio" 
+                            name="motive" 
+                            id="work"
+                            value="Trabalho / Negócios"
+                            required />
+                            Trabalho
+                        </label>
+                        <label for="per" class="motive">
+                            <input 
+                            type="radio" 
+                            name="motive" 
+                            id="per"
+                            value="lazer"
+                            required 
+                            checked/>
+                            Lazer
+                        </label>
+                    </div>
+                </div>
+    
+            </fieldset>
+            
+            <fieldset>
+                <div>
+                    <p class="label">Qual seu nível de satisfação com o atendimento? </p>
+                    <div class="container-motive">
+                        <label for="att-bad" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-att" 
+                            id="att-bad"
+                            value="bad"
+                            required />
+                            Ruim
+                        </label>
+                        <label for="att-neutral" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-att" 
+                            value="neutral"
+                            id="att-neutral"
+                            checked>
+                            Neutro
+                        </label>
+                        <label for="att-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-att" 
+                            id="att-good"
+                            value="good"
+                            required />
+                            Bom
+                        </label>
+                        <label for="att-very-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-att" 
+                            id="att-very-good"
+                            value="very-good"
+                            required />
+                            Muito Bom
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <p class="label">Qual seu nível de satisfação com o meio de viagem? </p>
+                    <div class="container-motive">
+                        <label for="transp-bad" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-transp" 
+                            id="transp-bad"
+                            value="bad"
+                            required />
+                            Ruim
+                        </label>
+                        <label for="transp-neutral" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-transp" 
+                            id="transp-neutral"
+                            value="neutral"
+                            required 
+                            checked/>
+                            Neutro
+                        </label>
+                        <label for="transp-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-transp" 
+                            id="transp-good"
+                            value="good"
+                            required />
+                            Bom
+                        </label>
+                        <label for="transp-very-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-transp" 
+                            id="transp-very-good"
+                            value="very-good"
+                            required />
+                            Muito Bom
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <p class="label">Qual seu nível de satisfação com o tempo de viagem? </p>
+                    <div class="container-motive">
+                        <label for="time-bad" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-time" 
+                            id="time-bad"
+                            value="bad"
+                            required />
+                            Ruim
+                        </label>
+                        <label for="time-neutral" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-time" 
+                            id="time-neutral"
+                            value="neutral"
+                            required 
+                            checked/>
+                            Neutro
+                        </label>
+                        <label for="time-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-time" 
+                            id="time-good"
+                            value="good"
+                            required />
+                            Bom
+                        </label>
+                        <label for="time-very-good" class="secundary-color">
+                            <input 
+                            type="radio" 
+                            name="lvl-time" 
+                            id="time-very-good"
+                            value="very-good"
+                            required />
+                            Muito Bom
+                        </label>
+                    </div>
+                </div>
+                <label for="feedback">
+                    <p class="label">Descreva sua experiência: </p>
+                    <textarea 
+                    name="feedback" 
+                    id="feedback" cols="50" 
+                    rows="10"
+                    placeholder="Informe as coisas que mais gostou e nos dê sugestões!"></textarea>
+                </label>
+            </fieldset>
+    
+            <div>
+                <p class="label">Como deseja receber a cópia desse formulário?</p>
+                <label for="form-email" class="copy">
+                    E-mail: 
+                    <input 
+                        type="checkbox" 
+                        name="form" 
+                        id="form-email"
+                        value="email"
+                        class="toggle"/>
+                </label>
+                <label for="form-sms" class="copy">
+                    SMS: 
+                    <input 
+                        type="checkbox" 
+                        name="form" 
+                        id="form-sms"
+                        value="sms"
+                        class="toggle"/>
+                </label>
+            </div>
+            <input 
+            type="submit" 
+            value="Enviar" 
+            id="submit"
+            name="submit"/>
+        </form>
+    </main>
+
+</body>
+</html>
